@@ -6,7 +6,19 @@
             Hello, World!
           </v-card-title>
           <v-card-text>
-            Nuxt+Vuetifyのテストページです
+            Nuxt+Vuetifyのテストページです<br>
+            <ul>
+              <li>
+                <nuxt-link to="card-test">
+                  v-card test
+                </nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="tooltip-test">
+                  v-tooltip test
+                </nuxt-link>
+              </li>
+            </ul>
           </v-card-text>
         </v-card>
       </v-col>

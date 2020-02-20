@@ -29,7 +29,6 @@
         <v-icon>mdi-menu</v-icon>
       </v-btn>
     </v-app-bar>
-    <v-text-field></v-text-field>
     <v-content>
       <v-container>
         <nuxt />
@@ -62,9 +61,9 @@
 export default {
   data () {
     return {
-      clipped: false,
+      clipped: true,
       drawer: false,
-      fixed: false,
+      fixed: true,
       items: [
         {
           icon: 'mdi-apps',
@@ -73,8 +72,13 @@ export default {
         },
         {
           icon: 'mdi-chart-bubble',
-          title: 'Vuetifyテスト1',
-          to: '/test1'
+          title: 'v-card test',
+          to: '/card-test'
+        },
+        {
+          icon: 'mdi-chart-bubble',
+          title: 'v-tooltip test',
+          to: '/tooltip-test'
         }
       ],
       miniVariant: false,
