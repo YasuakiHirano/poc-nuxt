@@ -18,6 +18,11 @@
                   v-tooltip test
                 </nuxt-link>
               </li>
+              <li>
+                <nuxt-link to="parts-test">
+                  parts test(v-btn, v-alert ..etc)
+                </nuxt-link>
+              </li>
             </ul>
           </v-card-text>
         </v-card>

@@ -79,6 +79,11 @@ export default {
           icon: 'mdi-chart-bubble',
           title: 'v-tooltip test',
           to: '/tooltip-test'
+        },
+        {
+          icon: 'mdi-chart-bubble',
+          title: 'parts test',
+          to: '/parts-test'
         }
       ],
       miniVariant: false,
