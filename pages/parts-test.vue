@@ -57,6 +57,27 @@
         </v-list-item>
       </v-list>
     </v-col>
+    <v-col cols="12">
+      <h2>v-iconのテスト</h2>
+      <v-btn color="red" x-large>
+        <v-icon class="white--text" x-large>mdi-bike-fast</v-icon>
+      </v-btn>
+      <v-btn color="blue" icon>
+        <v-icon x-small color="red">mdi-face</v-icon>
+      </v-btn>
+      <v-btn color="blue" icon>
+        <v-icon small>mdi-face</v-icon>
+      </v-btn>
+      <v-btn color="blue" icon>
+        <v-icon medium>mdi-face</v-icon>
+      </v-btn>
+      <v-btn color="blue" icon>
+        <v-icon large>mdi-face</v-icon>
+      </v-btn>
+      <v-btn color="blue" icon>
+        <v-icon x-large>mdi-face</v-icon>
+      </v-btn>
+    </v-col>
   </v-row>
 </template>
 <script>
