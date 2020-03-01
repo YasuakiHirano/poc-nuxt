@@ -84,6 +84,11 @@ export default {
           icon: 'mdi-chart-bubble',
           title: 'parts test',
           to: '/parts-test'
+        },
+        {
+          icon: 'mdi-chart-bubble',
+          title: 'form test',
+          to: '/form-test'
         }
       ],
       miniVariant: false,
