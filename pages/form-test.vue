@@ -6,6 +6,7 @@
       <v-text-field v-model="password" label="password" type="password"></v-text-field>
       <v-btn @click="movePage(1)" color="primary">push query</v-btn>
       <v-btn @click="movePage(2)" color="primary">push param</v-btn>
+      <v-btn @click="moveUsers()" color="primary">users param999</v-btn>
     </v-col>
   </v-row>
 </template>
@@ -26,8 +27,11 @@ export default {
         this.$router.push({ path: 'form-query-result-test' , query :{ name: this.name, email: this.email, password: this.password }});
       } else {
         console.log('push params:', this.name);
-        this.$router.push({ path: `form-params-result-test/${this.name}/${this.email}/${this.password}` , params :{ name: this.name, email: this.email, password: this.password }});
+        this.$router.push({ path: `form-params-result-test/${this.name}/${this.email}/${this.password}` });
       }
+    },
+    moveUsers() {
+      this.$router.push({ path: `users/999` });
     }
   }
 }
