@@ -8,6 +8,8 @@
           div pugでいろいろ書いてみるテスト
           div タグ名.クラスでクラスがつけれる
           div 属性はタグ名(属性='属性値')でつけれる
+          v-btn(color="primary" @click="clickTest()")
+            span ボタン
           hr.mt-2.mb-2
 </template>
 
@@ -16,6 +18,11 @@
        import VuetifyLogo from '~/components/VuetifyLogo.vue'
 
   export default {
-      components: {}
+      components: {},
+      methods: {
+        clickTest: function() {
+          alert("Hello!!");
+        }
+      },
   }
 </script>
