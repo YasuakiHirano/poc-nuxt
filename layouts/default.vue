@@ -94,6 +94,22 @@ export default {
           icon: 'mdi-chart-bubble',
           title: 'pug test',
           to: '/pug-test'
+        },
+        {
+          icon: 'mdi-chart-bubble',
+          title: 'component test',
+          to: '/component-test'
+        },
+      ],
+      miniVariant: false,
+      right: true,
+      rightDrawer: false,
+      title: 'nuxt+vuetifyのテストページ'
+    }
+  }
+}
+</script>
+
         }
       ],
       miniVariant: false,
