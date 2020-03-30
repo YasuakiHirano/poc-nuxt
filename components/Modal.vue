@@ -16,14 +16,18 @@
     div.mb-2
       v-btn(color="primary" @click="showModal()") モーダル表示
     div
-      v-btn(color="primary" @click="setParentData()") 親から貰ったデータ変更
+      v-text-field(v-model="addText" label="input text")
+      v-btn(color="primary" @click="setParentData()") 親のデータ変更(*parentData.text3String)
 </template>
 <script>
 export default {
+  props: {
+    parentData: Object
+  },
   data() {
     return {
-      dialog: true,
-      parentData: '',
+      dialog: false,
+      addText: '',
     }
   },
   methods: {
@@ -31,7 +35,7 @@ export default {
       this.$data.dialog = true;
     },
     setParentData() {
-      this.$data.parentData.test3String = 'コンポーネントで値変更！';
+      this.parentData.test3String = this.addText;
     }
   }
 }

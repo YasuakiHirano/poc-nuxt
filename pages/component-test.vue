@@ -4,7 +4,7 @@
       <h2>component test</h2>
     </v-col>
     <v-col cols="12">
-      <Modal ref="testModal"></Modal>
+      <Modal ref="testModal" :parentData="parentData"></Modal>
     </v-col>
     <v-col cols="12">
       <v-btn @click="showComponentData()">コンポーネントで入力したデータ</v-btn>
@@ -17,18 +17,19 @@ export default {
   components: {
     Modal,
   },
+  data() {
+    return {
+      parentData: {}
+    }
+  },
   mounted (){
-    let parentData = {};
-    parentData.testString = 'テスト引数文字列🐬';
-    parentData.test2String = 'テスト引数二つ目🐬';
-    parentData.test3String = '';
-
-    this.$refs.testModal.parentData = parentData;
-    console.log(this.$refs.testModal);
+    this.parentData.testString = 'テスト引数文字列🐬';
+    this.parentData.test2String = 'テスト引数二つ目🐬';
+    this.parentData.test3String = '';
   },
   methods: {
     showComponentData() {
-      alert(this.$refs.testModal.parentData.test3String);
+      alert(this.parentData.test3String);
     }
   }
 }
