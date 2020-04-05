@@ -100,6 +100,11 @@ export default {
           title: 'component test',
           to: '/component-test'
         },
+        {
+          icon: 'mdi-chart-bubble',
+          title: 'todos',
+          to: '/todos'
+        },
       ],
       miniVariant: false,
       right: true,
