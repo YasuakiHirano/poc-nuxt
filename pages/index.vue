@@ -27,14 +27,48 @@
           </v-card-text>
         </v-card>
       </v-col>
+      <v-col cols="12">
+        <h2 v-if="todos.length !== 0">
+          todos
+        </h2>
+        <v-list>
+          <v-list-item-group v-for="(item, index) in todos" :key="index">
+            <v-list-item>
+              <v-list-item-content>{{item}}</v-list-item-content>
+              <v-list-item-icon>
+                <v-icon @click="deleteTodo(key)">mdi-delete-circle</v-icon>
+              </v-list-item-icon>
+            </v-list-item>
+            <v-divider></v-divider>
+          </v-list-item-group>
+        </v-list>
+      </v-col>
     </v-row>
 </template>
 
 <script>
-  import Logo from '~/components/Logo.vue'
-       import VuetifyLogo from '~/components/VuetifyLogo.vue'
+import Logo from '~/components/Logo.vue'
+import VuetifyLogo from '~/components/VuetifyLogo.vue'
+import { mapActions, mapGetters } from 'vuex'
 
-  export default {
-      components: {}
-  }
+export default {
+  computed: {
+    ...mapGetters({
+      todos: 'todo/todoList'
+    }),
+  },
+  methods: {
+    ...mapActions({
+      addTodoItem: 'todo/add',
+      deleteItem: 'todo/delete'
+    }),
+    addTodo () {
+      this.addTodoItem(this.todoItem);
+      this.todoItem = '';
+    },
+    deleteTodo (key) {
+      this.deleteItem(key);
+    },
+  },
+}
 </script>
