@@ -35,7 +35,7 @@
       <h2>v-listのテスト</h2>
       <h3 class="pt-3">one line</h3>
       <v-list color="#4fc3f7">
-        <v-list-item v-for="item in listItems" :key="item.title" @click="">
+        <v-list-item v-for="item in listItems" :key="item.title">
           <v-list-item-icon>
             <v-icon class="white--text">{{item.icon}}</v-icon>
           </v-list-item-icon>
@@ -46,7 +46,7 @@
       </v-list>
       <h3 class="pt-3">two line</h3>
       <v-list two-line rounded>
-        <v-list-item v-for="item in listItems" :key="item.title" @click="">
+        <v-list-item v-for="item in listItems" :key="item.title">
           <v-list-item-icon>
             <v-icon>{{item.icon}}</v-icon>
           </v-list-item-icon>

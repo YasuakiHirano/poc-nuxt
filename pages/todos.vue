@@ -6,9 +6,12 @@
         v-btn.primary(@click="addTodo()") add
     div
       v-list
-        v-list-item-group(v-for="item in todos")
+        v-list-item-group(v-for="(item, key) in todos")
           v-list-item
+            v-checkbox
             v-list-item-content {{item}}
+            v-list-item-icon
+              v-icon(@click="deleteTodo(key)") mdi-delete-circle
           v-divider
 </template>
 
@@ -27,13 +30,17 @@ export default {
     }),
   },
   methods: {
-
     ...mapActions({
-      addTodoItem: 'todo/add'
+      addTodoItem: 'todo/add',
+      deleteItem: 'todo/delete'
     }),
     addTodo () {
       this.addTodoItem(this.todoItem);
-    }
+      this.todoItem = '';
+    },
+    deleteTodo (key) {
+      this.deleteItem(key);
+    },
   },
   mounted () {
   },
