@@ -105,6 +105,11 @@ export default {
           title: 'todos',
           to: '/todos'
         },
+        {
+          icon: 'mdi-chart-bubble',
+          title: 'typescript',
+          to: '/typescript-test'
+        },
       ],
       miniVariant: false,
       right: true,

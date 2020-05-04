@@ -5,18 +5,21 @@
   "author": "y.hirano",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+    "dev": "nuxt-ts",
+    "build": "nuxt-ts build",
+    "generate": "nuxt-ts generate",
+    "start": "nuxt-ts start"
   },
   "dependencies": {
+    "@nuxt/typescript-runtime": "^0.4.6",
     "nuxt": "^2.0.0",
+    "nuxt-property-decorator": "^2.7.2",
     "pug": "^2.0.4",
     "pug-loader": "^2.4.0",
     "pug-plain-loader": "^1.0.0"
   },
   "devDependencies": {
+    "@nuxt/typescript-build": "^0.6.6",
     "@nuxtjs/vuetify": "^1.0.0"
   }
 }
