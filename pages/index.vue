@@ -52,6 +52,11 @@ import VuetifyLogo from '~/components/VuetifyLogo.vue'
 import { mapActions, mapGetters } from 'vuex'
 
 export default {
+  async mounted() {
+    await this.$axios.$get('https://qiita.com/api/v2/items?page=1&per_page=5').then(function(result){
+      console.log(result);
+    });
+  },
   computed: {
     ...mapGetters({
       todos: 'todo/todoList'

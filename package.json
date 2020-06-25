@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^0.4.6",
+    "@nuxtjs/axios": "^5.11.0",
     "nuxt": "^2.0.0",
     "nuxt-property-decorator": "^2.7.2",
     "pug": "^2.0.4",
