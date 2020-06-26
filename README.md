@@ -1,6 +1,5 @@
 # poc-nuxt
-
-> My cat&#39;s meow Nuxt.js project
+nuxtとvuetifyのPoCリポジトリです。
 
 ## Build Setup
 

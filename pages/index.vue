@@ -28,6 +28,19 @@
         </v-card>
       </v-col>
       <v-col cols="12">
+        <h2 v-if="qiitaArticles.length !== 0">
+          qiitaの記事 - 作成日付降順
+        </h2>
+        <v-list>
+          <v-list-item-group v-for="(item, index) in qiitaArticles" :key="index">
+            <v-list-item>
+              <v-list-item-content><a :href="item.url" target="_blank">{{item.title}}</a></v-list-item-content>
+            </v-list-item>
+            <v-divider></v-divider>
+          </v-list-item-group>
+        </v-list>
+      </v-col>
+      <v-col cols="12">
         <h2 v-if="todos.length !== 0">
           todos
         </h2>
@@ -52,9 +65,15 @@ import VuetifyLogo from '~/components/VuetifyLogo.vue'
 import { mapActions, mapGetters } from 'vuex'
 
 export default {
+  data () {
+    return {
+      qiitaArticles: []
+    }
+  },
   async mounted() {
-    await this.$axios.$get('https://qiita.com/api/v2/items?page=1&per_page=5').then(function(result){
-      console.log(result);
+    let page = this;
+    await this.$axios.$get('https://qiita.com/api/v2/items?page=1&per_page=10').then(function(result){
+      page.qiitaArticles = result;
     });
   },
   computed: {
