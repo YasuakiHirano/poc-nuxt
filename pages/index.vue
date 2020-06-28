@@ -75,6 +75,10 @@ export default {
     await this.$axios.$get('https://qiita.com/api/v2/items?page=1&per_page=10').then(function(result){
       page.qiitaArticles = result;
     });
+
+    await this.$axios.$get('/zipApi/api/search?zipcode=8100012').then(function(result) {
+      console.log(result);
+    });
   },
   computed: {
     ...mapGetters({

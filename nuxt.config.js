@@ -42,7 +42,8 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/proxy'
   ],
   /*
   ** vuetify module configuration
@@ -75,6 +76,17 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
+    }
+
+  },
+  axios: {
+    proxy: true
+  },
+
+  proxy: {
+    '/zipApi/': {
+      target: 'https://zipcloud.ibsnet.co.jp',
+      pathRewrite: {'^/zipApi/': ''},
     }
   }
 }
