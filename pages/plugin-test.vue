@@ -31,9 +31,6 @@ export default {
       let page = this;
       await this.$zipcode(this.zipcode).then(function(result) {
         page.searchResults = result.data.results;
-        for (let key in result.data.results){
-          let value = result.data.results[key];
-        }
       });
     }
   }
