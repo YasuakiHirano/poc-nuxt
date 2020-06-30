@@ -110,6 +110,11 @@ export default {
           title: 'typescript',
           to: '/typescript-test'
         },
+        {
+          icon: 'mdi-chart-bubble',
+          title: 'plugin test',
+          to: '/plugin-test'
+        },
       ],
       miniVariant: false,
       right: true,
